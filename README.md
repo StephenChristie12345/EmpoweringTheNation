@@ -87,7 +87,7 @@ activity_locations.xml      - Locations page layout
 - **Gradients**: Header backgrounds, card backgrounds
 - **Shapes**: Button backgrounds, rounded corners
 - **Icons**: Navigation icons, star ratings
-- **Images**: Course hero images, location images
+- **Images**: Course images, location images
 
 ## Course Offerings
 
@@ -292,7 +292,7 @@ Add these images to `res/drawable/`:
 
 **Calculator Not Updating:**
 - Verify checkbox IDs match in layout and Kotlin
-- Check price mapping in CalculatorActivity
+- Check price mapping in FeeCalculator
 - Ensure OnCheckedChangeListener is properly set
 
 **Gradle Build Errors:**
