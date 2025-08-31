@@ -1,4 +1,4 @@
-
+TSHIAMO NKGE - ST10473572
 
 
 
@@ -283,7 +283,7 @@ Add these images to `res/drawable/`:
 **Images Not Displaying:**
 - Verify image files are in `res/drawable/`
 - Check file names match exactly (lowercase, no spaces)
-- Ensure image formats are supported (JPG, PNG, WebP)
+- Ensure image formats are supported (JPG, PNG, JPEG)
 
 **Navigation Not Working:**
 - Verify all activities are registered in AndroidManifest.xml
@@ -312,8 +312,3 @@ For technical support or questions about implementation:
 
 This project is for educational purposes and community skill development.
 
----
-
-**Project Status**: Ready for deployment
-**Last Updated**: August 2025
-**Version**: 1.0.0
