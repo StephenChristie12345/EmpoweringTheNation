@@ -1,5 +1,6 @@
 TSHIAMO NKGE - ST10473572
-
+STEPHEN CHRISTIE -
+TAMIKA SINGH -
 
 
 # Empowering the Nation - Android App
