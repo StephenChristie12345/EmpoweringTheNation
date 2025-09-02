@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/header_gradient"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@drawable/circle_button_bg"
+            android:padding="10dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="Back button" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fee Calculator"
+                android:textSize="26sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calculate your course fees"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:alpha="0.9" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/calculator_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu ▼"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_button_bg"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- 6-Month Courses Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6-Month Courses (R1500 each)"
+                android:textSize="20sp"
+                android:textColor="@color/text_dark"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_first_aid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="First Aid"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_sewing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sewing"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_landscaping"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Landscaping"
+                android:textSize="16sp"
+                android:layout_marginBottom="20dp" />
+
+            <!-- 6-Week Courses Section -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="6-Week Courses (R750 each)"
+                android:textSize="20sp"
+                android:textColor="@color/text_dark"
+                android:textStyle="bold"
+                android:layout_marginBottom="15dp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_life_skills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Life Skills"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_child_minding"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Child Minding"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <CheckBox
+                android:id="@+id/checkbox_cooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cooking"
+                android:textSize="16sp"
+                android:layout_marginBottom="25dp" />
+
+            <!-- Total Amount -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/calculator_gradient"
+                    android:orientation="vertical"
+                    android:padding="20dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Amount"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:id="@+id/total_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R0"
+                        android:textSize="28sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

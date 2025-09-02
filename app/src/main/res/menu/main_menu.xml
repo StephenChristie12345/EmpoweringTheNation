@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_home"
+        android:title="@string/menu_home" />
+
+    <item
+        android:id="@+id/menu_about"
+        android:title="@string/menu_about" />
+
+    <item
+        android:id="@+id/menu_six_month"
+        android:title="@string/menu_six_month" />
+
+    <item
+        android:id="@+id/menu_six_week"
+        android:title="@string/menu_six_week" />
+
+    <item
+        android:id="@+id/menu_calculator"
+        android:title="@string/menu_calculator" />
+
+    <item
+        android:id="@+id/menu_locations"
+        android:title="@string/menu_locations" />
+    <item
+        android:id="@+id/menu_quotes"
+        android:title="Quotes"
+        android:icon="@drawable/ic_quotes" />
+
+</menu>

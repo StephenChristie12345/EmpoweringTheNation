@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <ImageButton
+        android:id="@+id/back_button_six_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_back" />
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/header_gradient"
+        android:padding="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@drawable/circle_button_bg"
+            android:padding="10dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="Back button" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About Us"
+                android:textSize="26sp"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Empowering communities since 2022"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:alpha="0.9" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/about_menu_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu ▼"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_button_bg"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Content Area -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp">
+
+            <!-- Hero Image -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="25dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/growth"
+                android:contentDescription="Growth and empowerment image"
+                android:adjustViewBounds="true" />
+
+            <!-- Mission Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/calculator_gradient"
+                    android:orientation="vertical"
+                    android:padding="25dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Our Mission"
+                        android:textSize="22sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="15dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Empowering the Nation was established in 2025 and offers courses in Johannesburg. We aim to upskill individuals, making them more marketable and empowering them with the tools to start their own small businesses."
+                        android:textSize="15sp"
+                        android:textColor="@color/white"
+                        android:lineSpacingMultiplier="1.6" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Statistics Text -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hundreds of domestic workers and gardeners have been trained in both six-month long Learnerships and six-week Short Skills Training Programmes."
+                android:textSize="15sp"
+                android:textColor="@color/text_dark"
+                android:lineSpacingMultiplier="1.7"
+                android:layout_marginBottom="25dp" />
+
+            <!-- Offerings Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="What We Offer:"
+                android:textSize="22sp"
+                android:textColor="@color/text_dark"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp" />
+
+            <!-- Offerings List -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Professional Skills Training"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_dark"
+                    android:textStyle="bold"
+                    android:paddingStart="25dp"
+                    android:paddingVertical="12dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Marketable skill development"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_dark"
+                    android:textStyle="bold"
+                    android:paddingStart="25dp"
+                    android:paddingVertical="12dp"
+                    android:background="@color/white"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Job prospect improvement"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_dark"
+                    android:textStyle="bold"
+                    android:paddingStart="25dp"
+                    android:paddingVertical="12dp"
+                    android:background="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

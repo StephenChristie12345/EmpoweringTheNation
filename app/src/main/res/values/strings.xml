@@ -1,0 +1,48 @@
+<resources>
+
+    <string name="app_name">Empowering The Nation</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_about">About Us</string>
+    <string name="menu_six_month">6-Month Courses</string>
+    <string name="menu_six_week">6-Week Courses</string>
+    <string name="menu_calculator">Fee Calculator</string>
+    <string name="menu_locations">Our Locations</string>
+
+
+    <string name="time_941">9:41</string>
+    <string name="signal_battery_icons">📶 🔋</string>
+    <string name="button_menu">Menu ▼</string>
+    <string name="star_emoji">🌟</string>
+    <string name="app_title">EMPOWERING THE NATION</string>
+    <string name="app_subtitle">UNLOCK YOUR POTENTIAL</string>
+    <string name="about_us">About Us</string>
+    <string name="about_description">Discover our mission to transform communities</string>
+    <string name="six_month_courses">6-Month Courses</string>
+    <string name="six_month_price">R1500 per course - Professional development</string>
+    <string name="six_week_courses">6-Week Courses</string>
+    <string name="six_week_price">R750 per course - Essential skills training</string>
+    <string name="fee_calculator">Fee Calculator</string>
+    <string name="calculator_description">Calculate your total investment</string>
+
+
+    <!-- Content descriptions for accessibility -->
+    <string name="desc_back_button">Back button</string>
+    <string name="desc_menu_button">Menu button</string>
+    <string name="desc_app_logo">App logo</string>
+    <string name="desc_status_icons">Network signal and battery icons</string>
+
+    <string name="share_quote">Share Quote</string>
+    <string name="share_via_sms">Share via SMS</string>
+    <string name="share_via_email">Share via Email</string>
+    <string name="quote_of_the_day">Quote of the Day</string>
+    <string name="daily_quote">"Education is the most powerful weapon which you can use to change the world." - Nelson Mandela</string>
+    <string name="share_message">Check out this inspiring quote from Empowering The Nation app: "%s"</string>
+    <string name="email_subject">Inspiring Quote from Empowering The Nation</string>
+
+    <string name="back">Back</string>
+    <string name="back_to_courses">Back to Courses</string>
+    <string name="duration">Duration</string>
+    <string name="fee">Fee</string>
+    <string name="description">Description</string>
+    <string name="course_details">Course Details</string>
+</resources>
