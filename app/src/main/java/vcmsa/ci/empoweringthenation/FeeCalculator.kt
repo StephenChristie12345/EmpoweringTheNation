@@ -72,7 +72,7 @@ class FeeCalculator : AppCompatActivity() {
 
     private fun showPopupMenu(view: View) {
         val popup = PopupMenu(this, view)
-        popup.menuInflater.inflate(R.menu.main_menu, popup.menu) // FIXED
+        popup.menuInflater.inflate(R.menu.main_menu, popup.menu)
 
         popup.setOnMenuItemClickListener { item ->
             when (item.itemId) {

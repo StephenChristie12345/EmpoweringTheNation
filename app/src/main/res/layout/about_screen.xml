@@ -80,7 +80,7 @@
             android:orientation="vertical"
             android:padding="25dp">
 
-            <!-- Hero Image -->
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
