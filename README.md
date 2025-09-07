@@ -204,15 +204,21 @@ QuoteSharer.kt             - Utility for sharing quotes
 ### Primary Colors (res/values/colors.xml)
 ```xml
 <color name="primary_green">#32CD32</color>
-<color name="dark_green">#228B22</color>
-<color name="gold">#FFD700</color>
-<color name="orange">#FF8C00</color>
-<color name="blue">#1E90FF</color>
-<color name="red">#FF6347</color>
-<color name="background_light">#f8f9fa</color>
-<color name="white">#FFFFFF</color>
-<color name="black">#000000</color>
-<color name="text_dark">#333333</color>
+    <color name="dark_green">#228B22</color>
+    <color name="darker_green">#006400</color>
+    <color name="gold">#FFD700</color>
+    <color name="orange">#FF8C00</color>
+    <color name="blue">#1E90FF</color>
+    <color name="dark_blue">#0056B3</color>
+    <color name="red">#FF6347</color>
+    <color name="dark_red">#DC143C</color>
+    <color name="background_light">#f8f9fa</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_dark">#2D3748</color>
+    <color name="quote_bg_color">#F0F8FF</color>
+    <color name="primary_color">#3F51B5</color>
+
 ```
 
 ### Gradient Drawables
