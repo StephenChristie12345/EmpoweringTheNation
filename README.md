@@ -351,38 +351,81 @@ QuoteSharer.kt             - Utility for sharing quotes
    - Ensure package names match: `package vcmsa.ci.empoweringthenation`
 
 6. **Update AndroidManifest.xml**
-   ```xml
-   <application
-       android:allowBackup="true"
-       android:icon="@mipmap/ic_launcher"
-       android:label="@string/app_name"
-       android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-       
-       <activity android:name=".MainActivity">
-           <intent-filter>
-               <action android:name="android.intent.action.MAIN" />
-               <category android:name="android.intent.category.LAUNCHER" />
-           </intent-filter>
-       </activity>
-       
-       <activity android:name=".AboutScreen" />
-       <activity android:name=".SixMonthCourses" />
-       <activity android:name=".SixWeekCourses" />
-       <activity android:name=".FeeCalculator" />
-       <activity android:name=".Locations" />
-       <activity android:name=".QuoteScreen" />
-       <activity android:name=".CourseDetailActivity" />
-       <activity android:name=".FirstAidDetail" />
-       <activity android:name=".SewingDetail" />
-       <activity android:name=".LifeSkillsDetail" />
-       <activity android:name=".LandscapingDetail" />
-       <activity android:name=".ChildMindingDetail" />
-       <activity android:name=".CookingDetail" />
-       <activity android:name=".GardenMaintenanceDetail" />
-       
-   </application>
-   ```
+ ```
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/backup_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EmpoweringTheNation"
+        tools:targetApi="31">
+
+        <!-- Quote Screen Activity -->
+        <activity
+            android:name=".QuoteScreen"
+            android:exported="false" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Fee Calculator Activity -->
+        <activity
+            android:name=".FeeCalculator"
+            android:exported="false" />
+
+        <!-- Six Month Courses Activity -->
+        <activity
+            android:name=".SixMonthCourses"
+            android:exported="false" />
+
+        <!-- Six Week Courses Activity -->
+        <activity
+            android:name=".SixWeekCourses"
+            android:exported="false" />
+
+        <!-- About Screen Activity -->
+        <activity
+            android:name=".AboutScreen"
+            android:exported="false" />
+
+        <!-- Locations Activity -->
+        <activity
+            android:name=".Locations"
+            android:exported="false" />
+
+        <activity android:name=".CourseDetailActivity" android:exported="false" />
+        <activity android:name=".ChildMindingDetail" android:exported="false" />
+        <activity android:name=".CookingDetail" android:exported="false" />
+        <activity android:name=".FirstAidDetail" android:exported="false" />
+        <activity android:name=".GardenMaintenanceDetail" android:exported="false" />
+        <activity android:name=".LandscapingDetail" android:exported="false" />
+        <activity android:name=".LifeSkillsDetail" android:exported="false" />
+        <activity android:name=".SewingDetail" android:exported="false" />
+
+    </application>
+</manifest>
+```
 ### Required Images
 
 Add these images to `res/drawable/`:
