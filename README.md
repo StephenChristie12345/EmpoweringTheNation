@@ -80,7 +80,7 @@ LOCATION SCREEN
 
 
 
-MAPS SCREEN
+MAP SCREEN
 
 <img width="500" height="600" alt="EMP Map" src="https://github.com/user-attachments/assets/d198c29a-3e67-4da6-9a7f-ba2b7576643e" />
 
