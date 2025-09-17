@@ -20,7 +20,7 @@ Empowering the Nation is an Android application that provides information about 
 - **Fee Calculator**: Calculate total cost for selected courses
 - **Location Finder**: Find training centers across South Africa
 - **Course Details**: Comprehensive information about each program
-- **Daily Quotes**: Inspirational quotes with sharing capabilities
+
 
 ### App Screens
 1. **Home Screen**: Main navigation with course categories
@@ -29,8 +29,6 @@ Empowering the Nation is an Android application that provides information about 
 4. **6-Week Courses**: Short skills training programs (R750 each)
 5. **Fee Calculator**: Interactive pricing calculator
 6. **Locations**: Three training centers across South Africa
-7. **Quote Screen**: Daily inspirational quotes
-
 
 ## Screenshots
 
@@ -47,13 +45,9 @@ ABOUT US SCREEN
 
 6 MONTHS COURSES SCREEN
 
-<img width="500" height="600" alt="EMP 6 Month Courses" src="https://github.com/user-attachments/assets/422fadc5-9724-44e1-ac2c-22581cc726cd" />
-
 
 
 6 WEEKS COURSES SCREEN
-
-<img width="500" height="600" alt="EMP 6 Weeks Courses" src="https://github.com/user-attachments/assets/3a7029e8-14fc-4dac-bb8e-8263aa777f57" />
 
 
 
@@ -80,7 +74,7 @@ LOCATION SCREEN
 
 
 
-MAPS SCREEN
+MAP SCREEN
 
 <img width="500" height="600" alt="EMP Map" src="https://github.com/user-attachments/assets/d198c29a-3e67-4da6-9a7f-ba2b7576643e" />
 
@@ -204,15 +198,21 @@ QuoteSharer.kt             - Utility for sharing quotes
 ### Primary Colors (res/values/colors.xml)
 ```xml
 <color name="primary_green">#32CD32</color>
-<color name="dark_green">#228B22</color>
-<color name="gold">#FFD700</color>
-<color name="orange">#FF8C00</color>
-<color name="blue">#1E90FF</color>
-<color name="red">#FF6347</color>
-<color name="background_light">#f8f9fa</color>
-<color name="white">#FFFFFF</color>
-<color name="black">#000000</color>
-<color name="text_dark">#333333</color>
+    <color name="dark_green">#228B22</color>
+    <color name="darker_green">#006400</color>
+    <color name="gold">#FFD700</color>
+    <color name="orange">#FF8C00</color>
+    <color name="blue">#1E90FF</color>
+    <color name="dark_blue">#0056B3</color>
+    <color name="red">#FF6347</color>
+    <color name="dark_red">#DC143C</color>
+    <color name="background_light">#f8f9fa</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="text_dark">#2D3748</color>
+    <color name="quote_bg_color">#F0F8FF</color>
+    <color name="primary_color">#3F51B5</color>
+
 ```
 
 ### Gradient Drawables
@@ -351,38 +351,81 @@ QuoteSharer.kt             - Utility for sharing quotes
    - Ensure package names match: `package vcmsa.ci.empoweringthenation`
 
 6. **Update AndroidManifest.xml**
-   ```xml
-   <application
-       android:allowBackup="true"
-       android:icon="@mipmap/ic_launcher"
-       android:label="@string/app_name"
-       android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-       
-       <activity android:name=".MainActivity">
-           <intent-filter>
-               <action android:name="android.intent.action.MAIN" />
-               <category android:name="android.intent.category.LAUNCHER" />
-           </intent-filter>
-       </activity>
-       
-       <activity android:name=".AboutScreen" />
-       <activity android:name=".SixMonthCourses" />
-       <activity android:name=".SixWeekCourses" />
-       <activity android:name=".FeeCalculator" />
-       <activity android:name=".Locations" />
-       <activity android:name=".QuoteScreen" />
-       <activity android:name=".CourseDetailActivity" />
-       <activity android:name=".FirstAidDetail" />
-       <activity android:name=".SewingDetail" />
-       <activity android:name=".LifeSkillsDetail" />
-       <activity android:name=".LandscapingDetail" />
-       <activity android:name=".ChildMindingDetail" />
-       <activity android:name=".CookingDetail" />
-       <activity android:name=".GardenMaintenanceDetail" />
-       
-   </application>
-   ```
+ ```
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/backup_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EmpoweringTheNation"
+        tools:targetApi="31">
+
+        <!-- Quote Screen Activity -->
+        <activity
+            android:name=".QuoteScreen"
+            android:exported="false" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Fee Calculator Activity -->
+        <activity
+            android:name=".FeeCalculator"
+            android:exported="false" />
+
+        <!-- Six Month Courses Activity -->
+        <activity
+            android:name=".SixMonthCourses"
+            android:exported="false" />
+
+        <!-- Six Week Courses Activity -->
+        <activity
+            android:name=".SixWeekCourses"
+            android:exported="false" />
+
+        <!-- About Screen Activity -->
+        <activity
+            android:name=".AboutScreen"
+            android:exported="false" />
+
+        <!-- Locations Activity -->
+        <activity
+            android:name=".Locations"
+            android:exported="false" />
+
+        <activity android:name=".CourseDetailActivity" android:exported="false" />
+        <activity android:name=".ChildMindingDetail" android:exported="false" />
+        <activity android:name=".CookingDetail" android:exported="false" />
+        <activity android:name=".FirstAidDetail" android:exported="false" />
+        <activity android:name=".GardenMaintenanceDetail" android:exported="false" />
+        <activity android:name=".LandscapingDetail" android:exported="false" />
+        <activity android:name=".LifeSkillsDetail" android:exported="false" />
+        <activity android:name=".SewingDetail" android:exported="false" />
+
+    </application>
+</manifest>
+```
 ### Required Images
 
 Add these images to `res/drawable/`:
