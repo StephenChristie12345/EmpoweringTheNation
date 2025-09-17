@@ -47,7 +47,6 @@ class CourseAdapter(
             "Life Skills" -> Intent(context, LifeSkillsDetail::class.java)
             "Landscaping" -> Intent(context, LandscapingDetail::class.java)
             "Child Minding" -> Intent(context, ChildMindingDetail::class.java)
-            "Garden Maintenance" -> Intent(context, GardenMaintenanceDetail::class.java)
             "Cooking" -> Intent(context, CookingDetail::class.java)
             else -> Intent(context, CourseDetailActivity::class.java)
         }

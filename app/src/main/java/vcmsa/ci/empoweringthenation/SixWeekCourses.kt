@@ -11,13 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 class SixWeekCourses : AppCompatActivity() {
 
     private val sixWeekCourses = listOf(
-        Course("Sewing", "Basic sewing skills", 750.0, "6 weeks", "Sewing techniques, pattern reading, garment construction, and basic alterations."),
-        Course("Garden Maintenance", "Garden care basics", 750.0, "6 weeks", "Basic garden maintenance, plant care, pruning, watering systems, and pest control."),
-        Course("Basic Computer Skills", "Introduction to computers", 750.0, "6 weeks", "Fundamental computer operation, typing skills, basic software usage, and internet navigation."),
-        Course("Home Care", "Home maintenance skills", 750.0, "6 weeks", "Basic home maintenance, cleaning techniques, organization, and household management."),
-        Course("Food Handling", "Food safety training", 750.0, "6 weeks", "Food safety standards, hygiene practices, storage methods, and preparation techniques."),
-        Course("Customer Service", "Service skills training", 750.0, "6 weeks", "Customer interaction, communication skills, conflict resolution, and service excellence."),
-        Course("Communication Skills", "Effective communication", 750.0, "6 weeks", "Verbal and written communication, presentation skills, listening techniques, and professional etiquette.")
+        Course("Life Skills", "Personal development and essential life skills", 750.0, "6 weeks", "Essential life skills including communication, problem-solving, financial literacy, time management, and personal development."),
+        Course("Child Minding", "Professional childcare training", 750.0, "6 weeks", "Child development theories, safety procedures, educational activities, behavior management, and professional childcare practices."),
+        Course("Cooking", "Culinary arts and food preparation", 750.0, "6 weeks", "Basic cooking techniques, food preparation, nutrition fundamentals, menu planning, kitchen safety, and hygiene standards.")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -55,7 +55,12 @@
                 android:id="@+id/main_menu_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Menu" />
+                android:text="Menu ▼"
+                android:textColor="@color/white"
+                android:background="@drawable/circle_button_bg"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="8dp"
+                android:textSize="14sp" />
         </LinearLayout>
 
         <!-- Logo -->
