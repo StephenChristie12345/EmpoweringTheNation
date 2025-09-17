@@ -45,13 +45,9 @@ ABOUT US SCREEN
 
 6 MONTHS COURSES SCREEN
 
-<img width="500" height="600" alt="EMP 6 Month Courses" src="https://github.com/user-attachments/assets/422fadc5-9724-44e1-ac2c-22581cc726cd" />
-
 
 
 6 WEEKS COURSES SCREEN
-
-<img width="500" height="600" alt="EMP 6 Weeks Courses" src="https://github.com/user-attachments/assets/3a7029e8-14fc-4dac-bb8e-8263aa777f57" />
 
 
 
