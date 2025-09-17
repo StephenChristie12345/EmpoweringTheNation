@@ -20,7 +20,7 @@ Empowering the Nation is an Android application that provides information about 
 - **Fee Calculator**: Calculate total cost for selected courses
 - **Location Finder**: Find training centers across South Africa
 - **Course Details**: Comprehensive information about each program
-- **Daily Quotes**: Inspirational quotes with sharing capabilities
+
 
 ### App Screens
 1. **Home Screen**: Main navigation with course categories
@@ -29,8 +29,6 @@ Empowering the Nation is an Android application that provides information about 
 4. **6-Week Courses**: Short skills training programs (R750 each)
 5. **Fee Calculator**: Interactive pricing calculator
 6. **Locations**: Three training centers across South Africa
-7. **Quote Screen**: Daily inspirational quotes
-
 
 ## Screenshots
 
