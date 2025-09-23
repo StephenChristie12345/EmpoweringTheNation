@@ -122,7 +122,6 @@ LifeSkillsDetail.kt         - Life Skills course details
 LandscapingDetail.kt        - Landscaping course details
 ChildMindingDetail.kt       - Child Minding course details
 CookingDetail.kt            - Cooking course details
-GardenMaintenanceDetail.kt  - Garden Maintenance course details
 ```
 
 ### Layout Files
