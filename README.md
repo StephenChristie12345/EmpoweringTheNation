@@ -231,22 +231,12 @@ QuoteSharer.kt             - Utility for sharing quotes
    - CPR and resuscitation techniques
    - Industry-recognized certification
 
-2. **Business Management**
-   - Professional business skills
-   - Financial planning and leadership
-   - Management principles
-
-3. **Computer Literacy**
-   - Digital skills training
-   - Microsoft Office and internet usage
-   - Basic to advanced computer skills
-
-4. **Child Minding**
+2. **Child Minding**
    - Professional childcare training
    - Child development theories
    - Safety procedures and educational activities
 
-5. **Cooking**
+3. **Cooking**
    - Culinary arts training
    - Food preparation and nutrition
    - Menu planning and kitchen safety
@@ -267,30 +257,6 @@ QuoteSharer.kt             - Utility for sharing quotes
    - Pattern reading and garment construction
    - Basic alterations
 
-2. **Garden Maintenance**
-   - Garden care basics
-   - Plant care and pruning
-   - Watering systems and pest control
-
-3. **Basic Computer Skills**
-   - Introduction to computers
-   - Typing skills and software usage
-   - Internet navigation
-
-4. **Home Care**
-   - Home maintenance skills
-   - Cleaning techniques and organization
-   - Household management
-
-5. **Food Handling**
-   - Food safety training
-   - Hygiene practices and storage methods
-   - Preparation techniques
-
-6. **Customer Service**
-   - Service skills training
-   - Customer interaction and communication
-   - Conflict resolution
 
 7. **Communication Skills**
    - Effective communication
