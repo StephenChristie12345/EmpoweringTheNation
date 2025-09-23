@@ -309,7 +309,7 @@ QuoteSharer.kt             - Utility for sharing quotes
 1. **Create New Project**
    ```bash
    # Create new Android project in Android Studio
-   # Choose "Empty Activity" template
+   # Choose "Empty Views Activity" template
    # Set minimum SDK to API 21
    # Set package name: vcmsa.ci.empoweringthenation
    ```
