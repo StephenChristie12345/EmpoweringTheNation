@@ -1,3 +1,7 @@
+TSHIAMO NKGE - ST10473572
+STEPHEN CHRISTIE -
+TAMIKA SINGH -
+
 # Empowering the Nation - Android Application
 
 A comprehensive mobile application for skills training and professional development courses in South Africa.
