@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/background_light">
 
-    <!-- Header -->
+    <!-- Header (Keep your existing header code) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -19,11 +19,11 @@
             android:id="@+id/back_button"
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/ic_arrow_back"
-            android:background="@drawable/circle_button_bg"
-            android:padding="10dp"
             android:layout_marginEnd="20dp"
-            android:contentDescription="Back button" />
+            android:background="@android:drawable/divider_horizontal_dark"
+            android:contentDescription="Back button"
+            android:padding="10dp"
+            android:src="@drawable/ic_arrow_back" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -40,12 +40,12 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="235dp"
+                android:layout_height="60dp"
+                android:alpha="0.9"
                 android:text="Calculate your course fees"
-                android:textSize="16sp"
                 android:textColor="@color/white"
-                android:alpha="0.9" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
@@ -53,11 +53,11 @@
             android:id="@+id/calculator_menu_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Menu ▼"
-            android:textColor="@color/white"
-            android:background="@drawable/circle_button_bg"
+            android:background="@android:drawable/divider_horizontal_dark"
             android:paddingHorizontal="12dp"
             android:paddingVertical="8dp"
+            android:text="Menu ▼"
+            android:textColor="@color/white"
             android:textSize="14sp" />
 
     </LinearLayout>
@@ -73,6 +73,44 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:padding="20dp">
+
+            <!-- Discount Banner -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/six_week_gradient"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🎉 Special Offer!"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Get 10% discount when you enroll in 2 or more courses!"
+                        android:textSize="14sp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:lineSpacingExtra="4dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <!-- 6-Month Courses Section -->
             <TextView
@@ -142,7 +180,7 @@
                 android:textSize="16sp"
                 android:layout_marginBottom="25dp" />
 
-            <!-- Total Amount -->
+            <!-- Total Amount Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -166,6 +204,18 @@
                         android:textStyle="bold"
                         android:layout_marginBottom="10dp" />
 
+                    <!-- Original Amount (shown when discount applied) -->
+                    <TextView
+                        android:id="@+id/original_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R0"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        android:layout_marginBottom="4dp" />
+
+                    <!-- Final Amount -->
                     <TextView
                         android:id="@+id/total_amount"
                         android:layout_width="wrap_content"
@@ -173,7 +223,19 @@
                         android:text="R0"
                         android:textSize="28sp"
                         android:textColor="@color/white"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <!-- Discount Text -->
+                    <TextView
+                        android:id="@+id/discount_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textColor="@color/gold"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
 
                 </LinearLayout>
 

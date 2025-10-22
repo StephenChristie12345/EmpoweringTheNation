@@ -7,6 +7,7 @@ import android.widget.CheckBox
 import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 
 class FeeCalculator : AppCompatActivity() {
 
@@ -17,6 +18,14 @@ class FeeCalculator : AppCompatActivity() {
     private lateinit var checkboxChildMinding: CheckBox
     private lateinit var checkboxCooking: CheckBox
     private lateinit var totalAmountTextView: TextView
+    private lateinit var discountTextView: TextView
+    private lateinit var originalAmountTextView: TextView
+
+    // Course prices
+    private val PRICE_6_MONTH = 1500
+    private val PRICE_6_WEEK = 750
+    private val DISCOUNT_PERCENTAGE = 10 // 10% discount for 2+ courses
+    private val MIN_COURSES_FOR_DISCOUNT = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +45,8 @@ class FeeCalculator : AppCompatActivity() {
         checkboxChildMinding = findViewById(R.id.checkbox_child_minding)
         checkboxCooking = findViewById(R.id.checkbox_cooking)
         totalAmountTextView = findViewById(R.id.total_amount)
+        discountTextView = findViewById(R.id.discount_text)
+        originalAmountTextView = findViewById(R.id.original_amount)
     }
 
     private fun setupCheckboxListeners() {
@@ -51,13 +62,68 @@ class FeeCalculator : AppCompatActivity() {
 
     private fun calculateTotal() {
         var total = 0
-        if (checkboxFirstAid.isChecked) total += 1500
-        if (checkboxSewing.isChecked) total += 1500
-        if (checkboxLandscaping.isChecked) total += 1500
-        if (checkboxLifeSkills.isChecked) total += 750
-        if (checkboxChildMinding.isChecked) total += 750
-        if (checkboxCooking.isChecked) total += 750
+        var selectedCount = 0
+
+        // Calculate total and count selected courses
+        if (checkboxFirstAid.isChecked) {
+            total += PRICE_6_MONTH
+            selectedCount++
+        }
+        if (checkboxSewing.isChecked) {
+            total += PRICE_6_MONTH
+            selectedCount++
+        }
+        if (checkboxLandscaping.isChecked) {
+            total += PRICE_6_MONTH
+            selectedCount++
+        }
+        if (checkboxLifeSkills.isChecked) {
+            total += PRICE_6_WEEK
+            selectedCount++
+        }
+        if (checkboxChildMinding.isChecked) {
+            total += PRICE_6_WEEK
+            selectedCount++
+        }
+        if (checkboxCooking.isChecked) {
+            total += PRICE_6_WEEK
+            selectedCount++
+        }
+
+        // Apply discount if 2 or more courses selected
+        if (selectedCount >= MIN_COURSES_FOR_DISCOUNT) {
+            applyDiscount(total, selectedCount)
+        } else {
+            showRegularPrice(total)
+        }
+    }
+
+    private fun applyDiscount(originalTotal: Int, selectedCount: Int) {
+        val discountAmount = (originalTotal * DISCOUNT_PERCENTAGE) / 100
+        val finalTotal = originalTotal - discountAmount
+
+        // Show original price with strikethrough
+        originalAmountTextView.text = "R$originalTotal"
+        originalAmountTextView.paintFlags = originalAmountTextView.paintFlags or android.graphics.Paint.STRIKE_THRU_TEXT_FLAG
+        originalAmountTextView.visibility = View.VISIBLE
+
+        // Show discounted price
+        totalAmountTextView.text = "R$finalTotal"
+        totalAmountTextView.setTextColor(ContextCompat.getColor(this, R.color.gold))
+
+        // Show discount information
+        discountTextView.text = "🎉 $DISCOUNT_PERCENTAGE% Discount Applied! (Save R$discountAmount)"
+        discountTextView.setTextColor(ContextCompat.getColor(this, R.color.gold))
+        discountTextView.visibility = View.VISIBLE
+    }
+
+    private fun showRegularPrice(total: Int) {
         totalAmountTextView.text = "R$total"
+        totalAmountTextView.setTextColor(ContextCompat.getColor(this, R.color.white))
+
+        // Hide discount elements
+        originalAmountTextView.visibility = View.GONE
+        discountTextView.visibility = View.GONE
     }
 
     private fun setupBackButton() {

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
@@ -17,6 +18,7 @@ class CourseAdapter(
         val courseDescription: TextView = itemView.findViewById(R.id.course_description)
         val courseFee: TextView = itemView.findViewById(R.id.course_fee)
         val courseDuration: TextView = itemView.findViewById(R.id.course_duration)
+        val backgroundImage: ImageView = itemView.findViewById(R.id.course_background)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CourseViewHolder {
@@ -32,6 +34,7 @@ class CourseAdapter(
         holder.courseDescription.text = course.description
         holder.courseFee.text = "R${course.fee.toInt()}"
         holder.courseDuration.text = course.duration
+        holder.backgroundImage.setImageResource(course.imageResId)
 
         holder.itemView.setOnClickListener {
             onItemClick(course)
@@ -48,6 +51,7 @@ class CourseAdapter(
             "Landscaping" -> Intent(context, LandscapingDetail::class.java)
             "Child Minding" -> Intent(context, ChildMindingDetail::class.java)
             "Cooking" -> Intent(context, CookingDetail::class.java)
+            "Garden Maintenance" -> Intent(context, GardenMaintenanceDetail::class.java)
             else -> Intent(context, CourseDetailActivity::class.java)
         }
 
@@ -57,6 +61,7 @@ class CourseAdapter(
             putExtra("COURSE_FEE", course.fee)
             putExtra("COURSE_DURATION", course.duration)
             putExtra("COURSE_DETAILS", course.details)
+            putExtra("COURSE_IMAGE", course.imageResId)
         }
         context.startActivity(intent)
     }

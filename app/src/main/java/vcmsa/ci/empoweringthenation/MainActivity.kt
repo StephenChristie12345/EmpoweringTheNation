@@ -3,9 +3,7 @@ package vcmsa.ci.empoweringthenation
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.PopupMenu
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -16,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         setupMenuButton()
         setupNavigationButtons()
-        setupQuoteSharing()
+        setupQuotationButton()
     }
 
     private fun setupMenuButton() {
@@ -42,36 +40,29 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, FeeCalculator::class.java))
         }
 
-        // Add navigation to QuoteScreen from the quote section
-        findViewById<View>(R.id.quote_section)?.setOnClickListener {
-            startActivity(Intent(this, QuoteScreen::class.java))
+        findViewById<View>(R.id.quotation_card)?.setOnClickListener {
+            openQuotationActivity()
         }
     }
 
-    private fun setupQuoteSharing() {
-        val quoteText = findViewById<TextView>(R.id.quote_text)
-        val btnShareSMS = findViewById<Button>(R.id.btn_share_sms)
-        val btnShareEmail = findViewById<Button>(R.id.btn_share_email)
+    private fun setupQuotationButton() {
+    }
 
-        val currentQuote = getString(R.string.daily_quote)
+    private fun openQuotationActivity() {
+        val intent = Intent(this, QuotationActivity::class.java)
 
-        btnShareSMS?.setOnClickListener {
-            QuoteSharer.shareViaSMS(this, currentQuote)
-        }
+        intent.putExtra("COURSE_NAME", "Android Development")
+        intent.putExtra("COURSE_PRICE", "$299")
+        intent.putExtra("COURSE_DURATION", "8 weeks")
 
-        btnShareEmail?.setOnClickListener {
-            QuoteSharer.shareViaEmail(this, currentQuote)
-        }
-
-        // Add click listener to navigate to QuoteScreen when clicking on the quote text
-        quoteText?.setOnClickListener {
-            startActivity(Intent(this, QuoteScreen::class.java))
-        }
+        startActivity(intent)
     }
 
     private fun showPopupMenu(view: View) {
         val popup = PopupMenu(this, view)
         popup.menuInflater.inflate(R.menu.main_menu, popup.menu)
+
+        popup.menu.add("Get Quotation")
 
         popup.setOnMenuItemClickListener { item ->
             when (item.itemId) {
@@ -96,11 +87,14 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(this, Locations::class.java))
                     true
                 }
-                R.id.menu_quotes -> {
-                    startActivity(Intent(this, QuoteScreen::class.java))
-                    true
+                else -> {
+                    if (item.title == "Get Quotation") {
+                        openQuotationActivity()
+                        true
+                    } else {
+                        false
+                    }
                 }
-                else -> false
             }
         }
         popup.show()

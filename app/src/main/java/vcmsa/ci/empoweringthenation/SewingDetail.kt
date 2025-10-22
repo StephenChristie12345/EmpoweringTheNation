@@ -1,5 +1,6 @@
 package vcmsa.ci.empoweringthenation
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -12,6 +13,7 @@ class SewingDetail : AppCompatActivity() {
 
         setupCourseDetails()
         setupBackButton()
+        setupQuotationButton()
     }
 
     private fun setupCourseDetails() {
@@ -39,6 +41,18 @@ class SewingDetail : AppCompatActivity() {
     private fun setupBackButton() {
         findViewById<Button>(R.id.detail_back_button).setOnClickListener {
             finish()
+        }
+    }
+
+    private fun setupQuotationButton() {
+        findViewById<Button>(R.id.detail_get_quotation_button).setOnClickListener {
+            val quotationIntent = Intent(this, QuotationActivity::class.java).apply {
+                putExtra("COURSE_NAME", findViewById<TextView>(R.id.detail_course_name).text.toString())
+                putExtra("COURSE_PRICE", findViewById<TextView>(R.id.detail_course_fee).text.toString())
+                putExtra("COURSE_DURATION", findViewById<TextView>(R.id.detail_course_duration).text.toString())
+                putExtra("COURSE_DETAILS", findViewById<TextView>(R.id.detail_course_details).text.toString())
+            }
+            startActivity(quotationIntent)
         }
     }
 }

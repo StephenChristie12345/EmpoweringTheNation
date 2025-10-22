@@ -16,22 +16,31 @@
         android:background="@drawable/header_gradient">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/quote_of_the_day"
-            android:textSize="18sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_marginBottom="12dp" />
-
-        <TextView
-            android:id="@+id/quote_text"
+            android:id="@+id/course_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/daily_quote"
+            android:text="Course: Life Skills"
             android:textSize="16sp"
             android:textColor="@color/white"
-            android:lineSpacingMultiplier="1.4"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/course_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Price: R750"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/course_duration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Duration: 6 weeks"
+            android:textSize="14sp"
+            android:textColor="@color/white"
             android:layout_marginBottom="16dp" />
 
         <LinearLayout
@@ -44,23 +53,23 @@
                 android:id="@+id/btn_share_sms"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginEnd="8dp"
-                android:text="@string/share_via_sms"
-                android:background="@drawable/circle_button_bg"
+                android:layout_weight="1"
+                android:background="@android:drawable/divider_horizontal_dim_dark"
+                android:text="Send via SMS"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
             <Button
                 android:id="@+id/btn_share_email"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginStart="8dp"
-                android:text="@string/share_via_email"
-                android:background="@drawable/circle_button_bg"
+                android:layout_weight="1"
+                android:background="@android:drawable/divider_horizontal_dim_dark"
+                android:text="Send via Email"
                 android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 

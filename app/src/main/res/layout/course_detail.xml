@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Course Name"
-            android:textSize="24sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_marginBottom="8dp"
@@ -143,13 +143,24 @@
 
         <!-- Back Button -->
         <Button
+            android:id="@+id/detail_get_quotation_button"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="Get Quotation"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <Button
             android:id="@+id/detail_back_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="← Back to Courses"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
-            android:backgroundTint="@color/primary_color"
+            android:backgroundTint="@color/orange"
+            android:text="← Back to Courses"
             android:textColor="@color/white" />
 
     </LinearLayout>

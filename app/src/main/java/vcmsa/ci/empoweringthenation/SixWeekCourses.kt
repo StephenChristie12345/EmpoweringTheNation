@@ -11,14 +11,35 @@ import androidx.recyclerview.widget.RecyclerView
 class SixWeekCourses : AppCompatActivity() {
 
     private val sixWeekCourses = listOf(
-        Course("Life Skills", "Personal development and essential life skills", 750.0, "6 weeks", "Essential life skills including communication, problem-solving, financial literacy, time management, and personal development."),
-        Course("Child Minding", "Professional childcare training", 750.0, "6 weeks", "Child development theories, safety procedures, educational activities, behavior management, and professional childcare practices."),
-        Course("Cooking", "Culinary arts and food preparation", 750.0, "6 weeks", "Basic cooking techniques, food preparation, nutrition fundamentals, menu planning, kitchen safety, and hygiene standards.")
+        Course(
+            name = "Life Skills",
+            description = "Personal development and essential life skills",
+            fee = 750.0,
+            duration = "6 weeks",
+            details = "Essential life skills including communication, problem-solving, financial literacy, time management, and personal development.",
+            imageResId = R.drawable.life_skills2_bg
+        ),
+        Course(
+            name = "Child Minding",
+            description = "Professional childcare training",
+            fee = 750.0,
+            duration = "6 weeks",
+            details = "Child development theories, safety procedures, educational activities, behavior management, and professional childcare practices.",
+            imageResId = R.drawable.child_minding_bg
+        ),
+        Course(
+            name = "Cooking",
+            description = "Culinary arts and food preparation",
+            fee = 750.0,
+            duration = "6 weeks",
+            details = "Basic cooking techniques, food preparation, nutrition fundamentals, menu planning, kitchen safety, and hygiene standards.",
+            imageResId = R.drawable.cooking_bg
+        )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.courses_list) // Using your existing courses_list.xml
+        setContentView(R.layout.courses_list)
 
         // Set title
         findViewById<TextView>(R.id.title_text).text = "6-Week Courses"
@@ -42,6 +63,7 @@ class SixWeekCourses : AppCompatActivity() {
             putExtra("COURSE_FEE", course.fee)
             putExtra("COURSE_DURATION", course.duration)
             putExtra("COURSE_DETAILS", course.details)
+            putExtra("COURSE_IMAGE", course.imageResId)
         }
         startActivity(intent)
     }

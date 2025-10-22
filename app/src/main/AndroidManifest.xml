@@ -6,7 +6,8 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-feature android:name="android.hardware.telephony" android:required="false" />
 
@@ -19,56 +20,136 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmpoweringTheNation"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        tools:ignore="GoogleAppIndexingWarning">
 
-        <!-- Quote Screen Activity -->
-        <activity
-            android:name=".QuoteScreen"
-            android:exported="false" />
+        <!-- File Provider for PDF Sharing -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.EmpoweringTheNation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!-- Quotation Activity -->
+        <activity
+            android:name=".QuotationActivity"
+            android:label="Course Quotation"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.EmpoweringTheNation" />
+
         <!-- Fee Calculator Activity -->
         <activity
             android:name=".FeeCalculator"
-            android:exported="false" />
+            android:label="Fee Calculator"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.EmpoweringTheNation" />
 
         <!-- Six Month Courses Activity -->
         <activity
             android:name=".SixMonthCourses"
-            android:exported="false" />
+            android:label="6-Month Courses"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.EmpoweringTheNation" />
 
         <!-- Six Week Courses Activity -->
         <activity
             android:name=".SixWeekCourses"
-            android:exported="false" />
+            android:label="6-Week Courses"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.EmpoweringTheNation" />
 
         <!-- About Screen Activity -->
         <activity
             android:name=".AboutScreen"
-            android:exported="false" />
+            android:label="About Us"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.EmpoweringTheNation" />
 
         <!-- Locations Activity -->
         <activity
             android:name=".Locations"
-            android:exported="false" />
+            android:label="Our Locations"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.EmpoweringTheNation" />
 
-        <activity android:name=".CourseDetailActivity" android:exported="false" />
-        <activity android:name=".ChildMindingDetail" android:exported="false" />
-        <activity android:name=".CookingDetail" android:exported="false" />
-        <activity android:name=".FirstAidDetail" android:exported="false" />
-        <activity android:name=".GardenMaintenanceDetail" android:exported="false" />
-        <activity android:name=".LandscapingDetail" android:exported="false" />
-        <activity android:name=".LifeSkillsDetail" android:exported="false" />
-        <activity android:name=".SewingDetail" android:exported="false" />
+        <!-- Course Detail Activities -->
+        <activity
+            android:name=".CourseDetailActivity"
+            android:label="Course Details"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.EmpoweringTheNation" />
+
+        <activity
+            android:name=".ChildMindingDetail"
+            android:label="Child Minding Course"
+            android:exported="false"
+            android:parentActivityName=".SixMonthCourses"
+            android:theme="@style/Theme.EmpoweringTheNation" />
+
+        <activity
+            android:name=".CookingDetail"
+            android:label="Cooking Course"
+            android:exported="false"
+            android:parentActivityName=".SixMonthCourses"
+            android:theme="@style/Theme.EmpoweringTheNation" />
+
+        <activity
+            android:name=".FirstAidDetail"
+            android:label="First Aid Course"
+            android:exported="false"
+            android:parentActivityName=".SixMonthCourses"
+            android:theme="@style/Theme.EmpoweringTheNation" />
+
+        <activity
+            android:name=".GardenMaintenanceDetail"
+            android:label="Garden Maintenance Course"
+            android:exported="false"
+            android:parentActivityName=".SixWeekCourses"
+            android:theme="@style/Theme.EmpoweringTheNation" />
+
+        <activity
+            android:name=".LandscapingDetail"
+            android:label="Landscaping Course"
+            android:exported="false"
+            android:parentActivityName=".SixMonthCourses"
+            android:theme="@style/Theme.EmpoweringTheNation" />
+
+        <activity
+            android:name=".LifeSkillsDetail"
+            android:label="Life Skills Course"
+            android:exported="false"
+            android:parentActivityName=".SixMonthCourses"
+            android:theme="@style/Theme.EmpoweringTheNation" />
+
+        <activity
+            android:name=".SewingDetail"
+            android:label="Sewing Course"
+            android:exported="false"
+            android:parentActivityName=".SixWeekCourses"
+            android:theme="@style/Theme.EmpoweringTheNation" />
 
     </application>
 </manifest>

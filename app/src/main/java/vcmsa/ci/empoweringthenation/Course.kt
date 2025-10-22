@@ -5,5 +5,6 @@ data class Course(
     val description: String,
     val fee: Double,
     val duration: String,
-    val details: String
+    val details: String,
+    val imageResId: Int
 )

@@ -11,16 +11,37 @@ import androidx.recyclerview.widget.RecyclerView
 class SixMonthCourses : AppCompatActivity() {
 
     private val sixMonthCourses = listOf(
-        Course("First Aid", "Comprehensive first aid training", 1500.0, "6 months", "Learn life-saving techniques and emergency response procedures including CPR, wound care, and emergency situation management."),
-        Course("Sewing", "Professional sewing skills", 1500.0, "6 months", "Learn sewing techniques, pattern making, garment construction, and textile knowledge for professional sewing."),
-        Course("Landscaping", "Garden and landscape design", 1500.0, "6 months", "Landscape design principles, plant selection, garden maintenance, and hardscaping techniques.")
+        Course(
+            name = "First Aid",
+            description = "Comprehensive first aid training",
+            fee = 1500.0,
+            duration = "6 months",
+            details = "Learn life-saving techniques and emergency response procedures including CPR, wound care, and emergency situation management.",
+            imageResId = R.drawable.first_aid_bg
+        ),
+        Course(
+            name = "Sewing",
+            description = "Professional sewing skills",
+            fee = 1500.0,
+            duration = "6 months",
+            details = "Learn sewing techniques, pattern making, garment construction, and textile knowledge for professional sewing.",
+            imageResId = R.drawable.sewing_bg
+        ),
+        Course(
+            name = "Landscaping",
+            description = "Garden and landscape design",
+            fee = 1500.0,
+            duration = "6 months",
+            details = "Landscape design principles, plant selection, garden maintenance, and hardscaping techniques.",
+            imageResId = R.drawable.landscaping_bg
+        )
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.courses_list) // Using your existing courses_list.xml
+        setContentView(R.layout.courses_list)
 
-        // Set title
+        // Set title - use direct text for now to fix the error
         findViewById<TextView>(R.id.title_text).text = "6-Month Courses"
 
         setupRecyclerView()
@@ -42,6 +63,7 @@ class SixMonthCourses : AppCompatActivity() {
             putExtra("COURSE_FEE", course.fee)
             putExtra("COURSE_DURATION", course.duration)
             putExtra("COURSE_DETAILS", course.details)
+            putExtra("COURSE_IMAGE", course.imageResId)
         }
         startActivity(intent)
     }
