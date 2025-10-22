@@ -34,33 +34,43 @@ Empowering the Nation is an Android application designed to provide accessible e
 ## SCREENSHOTS
 
 **WELCOME SCREEN**
+
 <img width="600" height="700" alt="EMP HOME SCREEN" src="https://github.com/user-attachments/assets/b8709286-d55d-4eb4-9055-0e8fc8ca0290" />
 
 **ABOUT US SCREEN**
+
 <img width="600" height="700" alt="EMP ABOUT US SCREEN" src="https://github.com/user-attachments/assets/49f736ed-c243-40e9-b0f4-518547411f03" />
 
 **6 MONTH COURSES**
+
 <img width="600" height="700" alt="EMP 6 MONTH COURSE SCREEN" src="https://github.com/user-attachments/assets/6540c41a-261d-49e8-8925-386aaa7521d1" />
 
 **6 WEEK COURSES**
+
 <img width="700" height="700" alt="EMP 6 WEEK COURSE SCREEN" src="https://github.com/user-attachments/assets/6dc618fa-9e8c-4a57-bf60-3cf126b6913f" />
 
 **DESCRIPTION SCREEN**
+
 <img width="600" height="700" alt="EMP DESCRIPTION SCREEN" src="https://github.com/user-attachments/assets/482fdd05-bddc-4e3c-a762-d32ebf0f877e" />
 
 **FEE CALCULATOR SCREEN**
+
 <img width="600" height="700" alt="EMP FEE CALCULATOR SCREEN" src="https://github.com/user-attachments/assets/35baaada-6cd8-4996-a6df-dc498c4afba9" />
 
 **FEE CALCULATOR DISCOUNT SCREEN**
+
 <img width="880" height="1077" alt="EMP FEE CALCULATOR DISCOUNT SCREEN" src="https://github.com/user-attachments/assets/426a97d0-0371-49b6-848c-e4e99e5a79db" />
 
 **LOCATIONS SCREEN**
+
 <img width="600" height="700" alt="EMP LOCATIONS SCREEN" src="https://github.com/user-attachments/assets/db7ba479-8169-415f-a401-8ddf4ebb2c4e" />
 
 **MAP SCREEN**
+
 <img width="600" height="700" alt="EMP MAP SCREEN" src="https://github.com/user-attachments/assets/236ddf6a-cc68-4117-b949-1eda441c2fc9" />
 
 **QUOTATION SCREEN**
+
 <img width="600" height="700" alt="EMP QUOTATION SCREEN" src="https://github.com/user-attachments/assets/9eff503a-414c-4007-b1c3-119cf92c0af7" />
 
 
